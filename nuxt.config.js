@@ -10,13 +10,20 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
+    script: [
+      {
+        src: '~/assets/scripts.js'
+      }
+    ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    "~/assets/styles/main.css"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

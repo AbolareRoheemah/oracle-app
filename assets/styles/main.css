@@ -1,0 +1,471 @@
+li {
+    list-style-type: none;
+}
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+body {
+    overflow-x: hidden;
+}
+header {
+    padding: 0 30px 0 52px; 
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 110px;
+}
+
+nav {
+    height: inherit;
+    width: 50%;
+}
+nav ul {
+    width: 100%;
+   height: inherit;
+   align-items: center;
+   justify-content: space-between;
+}
+
+nav a {
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:black;
+    white-space: nowrap;
+}
+
+
+@media only screen and (max-width:768px) {
+    nav ul.flex.row {
+        padding-top: 80px;
+        z-index: 2;
+        justify-content: flex-start;
+        background: #3C185B;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        min-height: 110vh;
+        flex-direction: column;
+        overflow: hidden;
+        transition-duration: 300ms;
+        transform: translateX(-100%);
+    }
+    nav.open ul.flex.row {
+        transform: translateX(0);
+    }
+    nav {
+        width: fit-content;
+    }
+    nav ul.flex.row li {
+        margin-bottom: 40px;
+    }
+    #nav-icon {
+        position: relative;
+        z-index: 4;
+        margin-top: 25px;
+        width: 35px;
+        height: fit-content;
+        cursor: pointer;
+    }
+    #nav-icon div {
+        border-radius: 2px;
+        height: 3px;
+        width: 35px;
+        margin-bottom: 10px;
+        background-color: white;
+        transition-duration: 300ms;
+    }
+ 
+
+    /*nth-child() is a pseudo-class matches elements based on their position in a group of siblings. Siblings are elements that are held in a parent section like the divs.
+
+    */
+
+
+    #nav-icon div:nth-child(3) {
+        margin-bottom: 0;
+        color: black;
+
+    }
+
+    /* The rotate() CSS function defines a transformation that rotates an element around the x, y and z-axis without deforming it. */
+
+
+    .open #nav-icon div:nth-child(1){
+      transform: rotateZ(-45deg) translateX(-8px)translateY(10px);
+      color: black;
+    }
+
+    /* The default colour of the hamburger icon is white but you can add any color */
+
+    .open #nav-icon div:nth-child(2) {  
+        opacity: 0;
+
+
+    }
+    /* The class of open is from the javascript code */
+
+    .open #nav-icon div:nth-child(3) {
+        transform: rotateZ(45deg) translateX(-8px) translateY(-10px);
+
+    
+    }
+    .centerPic {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        height: 100%;
+        padding-bottom: 100px;
+        background-size: cover;
+    }
+    img.group {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 5%;
+        bottom: 51.32%;
+    }
+    img.frame {
+        position: absolute;
+        width: 179px;
+        height: 225px;
+        left: 50%;
+        top: 20%;
+
+        transform: rotate(2.65deg) translate(-50%, 0);
+    }
+    .welcomeText {
+        position: absolute;
+        width: 205px;
+        height: 28px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 365px;
+    
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 28px;
+        /* identical to box height */
+    
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+        color: #CACF00;
+    
+    }
+    .afterWelcome {
+        position: absolute;
+        width: 267px;
+        height: 83px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 400px;
+    
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 20px;
+        /* or 154% */
+    
+        display: flex;
+        align-items: center;
+        text-align: center;
+    
+        color: #FFFFFF;
+    
+        opacity: 0.6;
+    }
+    button.getStarted {
+        position: absolute;
+        width: 186px;
+        height: 46px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 550px;
+        color: rgb(3, 3, 3);
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 100px;
+        z-index: 2;
+        background-color: #FFF200;
+        border-radius: 50px;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow-x: hidden;
+        min-height: 100%;
+        padding: 0px 30px;
+    }
+    .newContainer {
+        background-color: #0D0B0B;
+        min-height: 100%;
+        margin-top: 0px;
+        height: 719px;
+        padding: 0px 30px;
+        min-width: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+    .nextPagePic {
+        position: absolute;
+        width: 118px;
+        height: auto;
+        left: 39.49px;
+        top: 30px;
+        margin: 0;
+        transform: rotate(-1.96deg);
+    }
+    .nextText {
+        position: absolute;
+        width: 118px;
+        height: 46px;
+        left: 188px;
+        top: 55px;
+        margin: 0;
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+    
+        color: #CACF00;
+    }
+    .smallNext {
+        position: absolute;
+        width: 119px;
+        height: 20px;
+        left: 188px;
+        top: 100px;
+    
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 20px;
+        /* identical to box height, or 200% */
+    
+        display: flex;
+        align-items: center;
+    
+        color: #FFFFFF;
+    }
+    #container {
+        min-height: 100vh;
+        background-size: cover;
+        padding: 0px 30px;
+        height: 719px;
+    }
+    .categories {
+        position: relative;
+        width: 100%;
+        height: 61px;
+        text-align: left;
+        display: flex;
+        font-weight: 600;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        background: rgba(128, 52, 203, 0.05);
+        border-radius: 40px;
+        padding: 20px 30px;
+        top: 220px;
+    }
+    .textCat {
+        justify-content: flex-start;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-size: 14px;
+        /* line-height: 18px; */
+        vertical-align: middle;
+    
+        color: #250842;
+    }
+    .cliped {
+        position: absolute;
+        width: 100%;
+        height: 149px;
+        left: 0px;
+        top: 0;
+        margin-bottom: 160px;
+    
+        background: #0D0B0B;
+        border-radius: 0px 0px 10% 10%;
+    }
+    /* END OF THE CATEGORIES PAGE */
+    /* BEGINIG OF THE SPECIALIZED PAGE */
+    .contain {
+        background-color: #271039;
+        min-height: 100vh;
+        height: 719px;
+        background-size: cover;
+    }
+    .specializeFrame {
+        position: absolute;
+        width: 95px;
+        height: 120px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 80px;
+    }
+    .card-main {
+        position: absolute;
+        left: 9.6%;
+        right: 9.6%;
+        top: 260px;
+        /* bottom: 24.44%; */
+        background: #FFFFFF;
+        border-radius: 13px;
+        height: 251.58px;
+    
+    }
+    .inner-card {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 242px;
+    height: 20px;
+    width: 230px;
+    padding: 0 20px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.0796252);
+    border-radius: 13px;
+    }
+    .text {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 220px;
+        bottom: 64.53%;
+    
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        /* identical to box height */
+    
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+    }
+    .small {
+        position: absolute;
+        text-align: center;
+        right: 40.8%;
+        top: 15%;
+        bottom: 50.25%;
+    
+        font-family: SF Compact Display;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+    
+        letter-spacing: 0.150588px;
+    
+        color: #9B9B9B;
+    
+        opacity: 0.6;
+    }
+    .spText {
+        position: absolute;
+        width: 213px;
+        /* height: 60px; */
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 60px;
+    
+        font-family: 'DM Sans';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #250842;
+
+    }
+    .cancel {
+        position: absolute;
+        left: 17%;
+        /* right: 60%; */
+        top: 64.41%;
+        bottom: 28.33%;
+        z-index: 2;
+        opacity: 1;
+    }
+    .next {
+        position: absolute;
+        /* left: 45%; */
+        right: 17%;
+        top: 64.53%;
+        bottom: 28.45%;
+    }
+
+    /* styles for random digit page */
+    .box {
+        width: 47px;
+        height: 47px;
+        background: #C4C4C4;
+        opacity: 0.3;
+        border-radius: 10px;
+        margin: 0px 5px;
+        text-align: center;
+    
+    }
+    .fourBox {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        top: 120px;
+    }
+    .downArrow {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
+        top: 80%;
+        bottom: 10%;
+    }
+    #small {
+        position: absolute;
+        width: 246px;
+        height: 32px;
+        top: 100%;
+        bottom: 0%;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        /* or 133% */
+        text-align: center;
+        color: #CECECE;
+        padding: 150px 40px 0px ;
+        bottom: 0%;
+        opacity: 0.3;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}
